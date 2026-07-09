@@ -211,3 +211,58 @@ The development team must adhere to the following non-negotiable operational bou
 
 - **NFR-015 (Interface Responsiveness):** The system interface shall automatically adapt its layout configuration across desktop (widths greater than or equal to 1024px), tablet (widths between 768px and 1023px), and mobile viewports (widths less than 768px) without loss of feature functionality.  
   *Rationale:* Explicitly satisfies the client’s technical boundary for full usability on desktop, tablet, and mobile layouts alike.
+# 5. Business Rules
+
+Business rules define the core policies, constraints, and operational philosophies of TaskFlow Solutions Ltd. Unlike functional requirements (which describe what the software does), business rules are the organizational laws mandated by the business that the system is strictly required to enforce.
+
+## 5.1 BR-001: Role-Based Authorization Hierarchy
+**Policy:** The organization assigns system privileges based on user roles. The system shall enforce these role-based permissions.
+
+**Enforcement Constraints:**
+- Only users with the System Administrator role shall have the authority to create, modify, or deactivate user accounts and structural teams.
+- Only users with the Project Manager role shall have the authority to initialize projects, manage project metadata, create tasks, assign work, and generate performance reports.
+- Users with the Team Member role are explicitly restricted to viewing assigned tasks, updating task execution states, and participating in comment threads.
+
+## 5.2 BR-002: Project Archival Eligibility
+**Policy:** A project cannot be retired or archived while there is active, incomplete work remaining within its container.
+
+**Enforcement Constraints:** The system shall prevent a Project Manager from transitioning a project’s state to "Archived" unless 100% of the individual tasks nested within that project container hold a status of Done.
+
+## 5.3 BR-003: Task Assignment Boundaries
+**Policy:** To preserve operational accountability while accommodating cross-functional collaboration, a task may only be assigned to a user who has been explicitly allocated to that specific project.
+
+**Enforcement Constraints:** The system shall restrict the selection list of eligible task assignees strictly to users who are actively attached to the parent project container, regardless of their primary organizational team.
+
+## 5.4 BR-004: Data Integrity and Retention Policy
+**Policy:** Personnel turnover must not result in the loss of corporate operational history or performance footprints.
+
+**Enforcement Constraints:** Changing a user account’s status to "Inactive" must not delete, alter, or purge any historical task records, logged status transitions, or communication comments authored by that user. The user's name remains permanently attached to their historical actions, appended with an "Inactive" status flag.
+
+## 5.5 BR-005: Communication Audit Integrity
+**Policy:** Comments form part of the project audit trail. Any modification or deletion must be restricted according to organizational policy and be fully logged.
+
+**Enforcement Constraints:** The system shall log the original content, modified content, author identity, and explicit timestamp of any comment edit or administrative removal, preserving the historical trail within the audit logging environment.
+
+## 5.6 BR-006: Task Deadline Validity
+**Policy:** Every task must have a valid deadline that falls within the chronological duration of its parent project.
+
+**Enforcement Constraints:** The system shall reject any task configuration or update where:
+
+$$\text{Due date} < \text{Project start date}$$
+
+$$\text{Due date} > \text{Project end date}$$
+
+## 5.7 BR-007: Unique User Identity
+**Policy:** The organization requires a singular, verifiable digital identity for every individual workforce account.
+
+**Enforcement Constraints:** The system shall reject the creation or modification of any user account that attempts to register an email address already assigned to another active or inactive user profile in the system directory.
+
+## 5.8 BR-008: Project Ownership
+**Policy:** Operational accountability demands clear ownership; every project must have a singular point of responsibility.
+
+**Enforcement Constraints:** The system shall require exactly one Project Manager to be designated as the owner during project initialization and shall prevent a project record from being saved without an active owner assigned.
+
+## 5.9 BR-009: Task Ownership
+**Policy:** Every individual work breakdown item must traceably reside within a defined business objective.
+
+**Enforcement Constraints:** The system shall prevent the creation of independent or orphaned tasks; every individual task must belong to exactly one valid project container.
