@@ -3,7 +3,7 @@
 **Project Name:** TaskFlow
 **Version:** 1.0
 
----
+
 
 ## 1. Introduction
 
@@ -108,3 +108,106 @@ The development team must adhere to the following non-negotiable operational bou
 - **Connectivity:** It is assumed that users will have continuous internet or network access while interacting with the system; offline functionality is not required.
 - **User Identity:** It is assumed that all authorized employees possess a valid company-issued email address for account creation and identification.
 - **Workflow Readiness:** The project depends on the client providing finalized, approved organizational definitions for user roles and initial project workflows before system implementation begins.
+# 3. Specific Functional Requirements
+
+## 3.1 FR-001: User Authentication
+- **FR-001.1** The system shall allow registered users to log in using their unique company email address and password.
+- **FR-001.2** The system shall validate the provided credentials against stored user records.
+- **FR-001.3** The system shall deny access and display an error message if the credentials are invalid.
+- **FR-001.4** The system shall establish an authenticated session upon successful login, redirecting the user to their appropriate landing interface based on their role.
+- **FR-001.5** The system shall allow authenticated users to securely log out, terminating the active session and redirecting them back to the login interface.
+
+## 3.2 FR-002: User Management
+- **FR-002.1** The system shall allow System Administrators to create new user profiles by inputting a first name, last name, unique company email address, and assigned operational role.
+- **FR-002.2** The system shall allow System Administrators to modify existing user profile details.
+- **FR-002.3** The system shall allow System Administrators to change a user account’s status to "Inactive," instantly terminating any active sessions and blocking all future login attempts for that account.
+
+## 3.3 FR-003: Team Management
+- **FR-003.1** The system shall allow System Administrators to create organizational teams by defining a unique team name and description.
+- **FR-003.2** The system shall allow System Administrators to allocate active users to one or more structural teams.
+- **FR-003.3** The system shall allow System Administrators to remove users from a team, instantly revoking their access to team-specific data views.
+
+## 3.4 FR-004: Project Management
+- **FR-004.1** The system shall allow Project Managers to initialize new projects by entering a project name, description, start date, and target completion deadline.
+- **FR-004.2** The system shall allow Project Managers to modify project details, schedules, and deadlines for active projects.
+- **FR-004.3** The system shall allow Project Managers to associate specific operational teams or individual users with an active project container.
+- **FR-004.4** The system shall allow Project Managers to change a project's operational state to "Archived" once all deliverables are met, rendering the project container read-only.
+
+## 3.5 FR-005: Task Management
+- **FR-005.1** The system shall allow Project Managers to create tasks inside an active project container, requiring a task title, description, priority tier (High, Medium, Low), and hard due date.
+- **FR-005.2** The system shall allow Project Managers to assign a task to a designated Team Member associated with that project.
+- **FR-005.3** The system shall present a personalized, filtered workspace view to logged-in Team Members showing only tasks explicitly assigned to them or their team.
+- **FR-005.4** The system shall allow assigned Team Members and Project Managers to transition a task’s status forward and backward through a strict state machine: To Do → In Progress → Done.
+
+## 3.6 FR-006: Dashboard Visualizations
+- **FR-006.1** The system shall display the real-time completion percentage of an active project based on the ratio of "Done" tasks to total project tasks.
+- **FR-006.2** The system shall present a visual chart summarizing the distribution of tasks across the three tracking states (To Do, In Progress, Done) within a selected project.
+- **FR-006.3** The system shall generate high-visibility visual indicators on the workspace for any task whose active calendar date has surpassed its assigned due date without moving to the "Done" state.
+
+## 3.7 FR-007: Task Comments
+- **FR-007.1** The system shall maintain a chronological, text-only communication thread at the bottom of every individual task details view.
+- **FR-007.2** The system shall allow authorized users who have access to the parent project to post plain text comments to the active task thread.
+- **FR-007.3** The system shall automatically append the sender's name and an immutable date/time stamp to every posted comment.
+
+## 3.8 FR-008: Automated Status Alerts
+- **FR-008.1** The system shall automatically trigger an internal notification to a user the moment a task is assigned to them by a Project Manager.
+- **FR-008.2** The system shall automatically generate an alert for the project owner when a Team Member updates a task status.
+- **FR-008.3** The system shall automatically trigger an urgent deadline alert to the assignee when an incomplete task is within 24 hours of its due date.
+- **FR-008.4** The system shall present a dedicated notification center interface where users can view and clear their unread alerts.
+
+## 3.9 FR-009: Document Summaries (Reporting)
+- **FR-009.1** The system shall compile live project tracking statistics into a downloadable, professionally formatted document report detailing overall project timeline progress, remaining workload, and overdue tasks.
+- **FR-009.2** The system shall generate downloadable employee performance reports summarizing individual metrics such as tasks completed on time, currently active workloads, and historically missed deadlines.
+- **FR-009.3** The system shall restrict report generation and downloading functionality strictly to users holding the Project Manager role.
+# 4. Non-Functional Requirements
+
+## 4.1 Performance Requirements
+- **NFR-001 (Response Time):** The system shall load any standard workspace view or dashboard interface within 2.0 seconds under normal operational loads.  
+  *Rationale:* Quantifies the client's request for "High performance" based on standard web application usability benchmarks to ensure the requirement is measurable.
+
+- **NFR-002 (Data Processing):** The system shall process and reflect simple state changes (such as updating a task status from "In Progress" to "Done") in less than 1.0 second from the moment of user submission.  
+  *Rationale:* Directly supports the client's critical need for managers to monitor project progress in real time to catch bottlenecks immediately.
+
+- **NFR-003 (Report Generation):** The system shall compile data and initiate the download of formatted PDF project or performance reports in less than 5.0 seconds.  
+  *Rationale:* Solves the operational bottleneck where manual reporting currently consumes valuable employee time.
+
+## 4.2 Security Requirements
+- **NFR-004 (Access Controls):** The system shall prevent any unauthenticated user from accessing any internal dashboard, project container, or task record.  
+  *Rationale:* Directly satisfies the explicit requirement to secure company data through proper authentication and authorization.
+
+- **NFR-005 (Session Management):** The system shall automatically terminate an active user session after 30 minutes of continuous inactivity, requiring the user to re-authenticate to regain access.  
+  *Rationale:* Standard corporate security practice to safeguard active account sessions on shared company hardware.
+
+- **NFR-006 (Credential Validation):** The system shall reject password configurations during user creation or updates that do not meet a minimum structural threshold of 8 characters, including at least one number and one special character.  
+  *Rationale:* Enforces a measurable minimum standard for user identity protection across the organization.
+
+- **NFR-007 (Data Protection):** The system shall store user passwords using a secure one-way hashing algorithm.  
+  *Rationale:* Fulfills the mandate for secure credential storage at an engineering requirements level without prematurely locking the development team into a specific tool or implementation choice.
+
+## 4.3 Reliability and Availability Requirements
+- **NFR-008 (System Availability):** The system shall be operational and accessible to users 24 hours a day, 7 days a week, achieving a minimum operational uptime of 99.9% over any given calendar month, excluding announced, scheduled maintenance windows.  
+  *Rationale:* Guarantees consistent system reliability so employees do not experience costly operational downtime.
+
+- **NFR-009 (Fault Tolerance):** The system shall handle unexpected operational errors gracefully without dropping the user's active browser session or corrupting currently open project records.  
+  *Rationale:* Prevents software crashes from causing lost progress or data fragmentation.
+
+## 4.4 Scalability Requirements
+- **NFR-010 (Concurrent Users):** The system shall maintain its specified performance metrics while supporting at least 500 concurrent active users interacting with the platform simultaneously.  
+  *Rationale:* Quantifies the system's target operational capacity to handle organizational growth cleanly.
+
+- **NFR-011 (Data Volume Growth):** The system shall experience zero degradation in page load or search performance as the volume of stored historical records grows up to 10,000 tasks and 1,000 active projects.  
+  *Rationale:* Ensures long-term storage sustainability as teams complete projects over multiple quarters.
+
+## 4.5 Usability Requirements
+- **NFR-012 (Operational Learnability):** The system interface shall be intuitive enough that a standard end-user (Team Member) can successfully navigate their workspace, update a task status, and post a comment within 15 minutes of exposure without formal training.  
+  *Rationale:* Formally measures and verifies the client's core request for a highly intuitive, user-friendly interface.
+
+- **NFR-013 (Accessibility Standards):** The user interface layout, contrast ratios, and element sizing shall comply with modern web accessibility guidelines to guarantee usability for individuals using standard digital screens.  
+  *Rationale:* Ensures equal system usability across the entire workforce.
+
+## 4.6 Maintainability and Compatibility Requirements
+- **NFR-014 (Platform Compatibility):** The system's complete functional toolset must behave identically across the latest two major versions of Google Chrome, Mozilla Firefox, Apple Safari, and Microsoft Edge.  
+  *Rationale:* Guarantees seamless functionality across the standard web browsers utilized across the company.
+
+- **NFR-015 (Interface Responsiveness):** The system interface shall automatically adapt its layout configuration across desktop (widths greater than or equal to 1024px), tablet (widths between 768px and 1023px), and mobile viewports (widths less than 768px) without loss of feature functionality.  
+  *Rationale:* Explicitly satisfies the client’s technical boundary for full usability on desktop, tablet, and mobile layouts alike.
