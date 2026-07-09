@@ -66,3 +66,45 @@ The following documents were used as inputs and constraints during the creation 
 ### 1.5 Document Overview
 
 This document is organized into sections describing the system requirements, user roles, functional requirements, non-functional requirements, business rules, and supporting information.
+# 2. Overall Description
+
+## 2.1 Product Perspective
+TaskFlow is a standalone, web-based system designed to centralize project tracking and collaboration for TaskFlow Solutions Ltd. The system completely replaces the organization's existing manual process of tracking work via disconnected Excel spreadsheets, emails, and WhatsApp groups.
+
+The application interacts with its environment through the following external interfaces:
+
+- **User Interfaces:** Users interact with the system via a responsive web interface accessible through standard web browsers on desktop, tablet, and mobile devices.
+- **Hardware Interfaces:** The system has no specialized hardware requirements and shall run on standard consumer computer and mobile device hardware capable of running a modern web browser.
+- **Software Interfaces:** The system operates entirely within the user's web browser application environment.
+- **Communications Interfaces:** The system requires a network connection to transmit data between the client user interface and the system servers. It does not interface with any external third-party software, calendars, or messaging platforms.
+
+## 2.2 User Characteristics (Actors)
+The system's user base consists of three distinct categories of users, defined by their operational responsibilities within the organization. All users are assumed to possess basic computer literacy and familiarity with standard web applications.
+
+- **System Administrator:** Technical or operations staff responsible for managing the system's user directory. They require tools to create accounts, deactivate users, and organize personnel into teams. They do not manage day-to-day project workflows.
+- **Project Manager:** Team leads and department supervisors responsible for planning and tracking organizational work. They require high-level visibility into multiple projects, the ability to delegate tasks, and access to performance and status reports.
+- **Team Member:** Operational staff members responsible for executing specific tasks. They require a focused interface to view their personal work assignments, update progress, and communicate directly regarding specific work items.
+
+## 2.3 Product Functions
+This section provides a high-level summary of the core behavioral capabilities the system must perform from the user's point of view.
+
+- **User and Team Administration:** The system shall allow the creation, modification, and deactivation of user accounts and permit grouping multiple users into operational teams.
+- **Project Initialization:** The system shall allow authorized users to define new projects, set overall project schedules, and assign project ownership.
+- **Task Management and Allocation:** The system shall support breaking down projects into individual assignable tasks, including setting task due dates, priority levels, and tracking active work states (To Do, In Progress, Done).
+- **Progress Visualization:** The system shall provide visual summaries of project health, showing overall completion percentages, task distributions, and deadline alerts.
+- **Contextual Collaboration:** The system shall support direct text communication attached directly to individual task records, allowing users to exchange updates in a shared thread.
+- **Automated System Alerts:** The system shall generate automatic behavioral triggers to notify users of new task assignments, changes to task status, and approaching deadlines.
+- **Report Exporting:** The system shall compile current system data into downloadable, formatted document summaries for project health and individual task performance.
+
+## 2.4 Design and Implementation Constraints
+The development team must adhere to the following non-negotiable operational boundaries:
+
+- **Interface Medium:** The system must be developed strictly as a web application. No native mobile software installation packages (such as iOS or Android apps) shall be created.
+- **Browser Compatibility:** The application's interface must function correctly and look consistent across the latest two major versions of standard modern web browsers (Chrome, Firefox, Safari, Edge).
+- **Display Responsiveness:** The system's user interface must automatically scale and rearrange its layout to remain highly usable across desktop, tablet, and mobile phone screen sizes.
+- **Access Restraints:** The system must restrict access to features and data based on verified user identities and assigned roles.
+
+## 2.5 Assumptions and Dependencies
+- **Connectivity:** It is assumed that users will have continuous internet or network access while interacting with the system; offline functionality is not required.
+- **User Identity:** It is assumed that all authorized employees possess a valid company-issued email address for account creation and identification.
+- **Workflow Readiness:** The project depends on the client providing finalized, approved organizational definitions for user roles and initial project workflows before system implementation begins.
