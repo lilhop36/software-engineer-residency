@@ -1,1 +1,121 @@
-<mxfile host="app.diagrams.net" modified="2026-07-14" agent="5.0" etag="" version="1.0" type="device"><diagram id="generate-report" name="Generate Report"><mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="actor1" value="Manager" style="shape=umlActor;html=1;" vertex="1" parent="1"><mxGeometry x="80" y="40" width="30" height="60" as="geometry"/></mxCell><mxCell id="actor2" value="Report Service" style="shape=box;html=1;" vertex="1" parent="1"><mxGeometry x="350" y="40" width="120" height="60" as="geometry"/></mxCell><mxCell id="actor3" value="Database" style="shape=box;html=1;" vertex="1" parent="1"><mxGeometry x="620" y="40" width="100" height="60" as="geometry"/></mxCell><mxCell id="line1" value="" style="line;strokeWidth=2;direction=ltr;" edge="1" parent="1" source="actor1" target="actor1"><mxGeometry relative="1" as="geometry"><mxPoint x="95" y="100" as="sourcePoint"/><mxPoint x="95" y="600" as="targetPoint"/></mxGeometry></mxCell><mxCell id="line2" value="" style="line;strokeWidth=2;direction=ltr;" edge="1" parent="1" source="actor2" target="actor2"><mxGeometry relative="1" as="geometry"><mxPoint x="410" y="100" as="sourcePoint"/><mxPoint x="410" y="600" as="targetPoint"/></mxGeometry></mxCell><mxCell id="line3" value="" style="line;strokeWidth=2;direction=ltr;" edge="1" parent="1" source="actor3" target="actor3"><mxGeometry relative="1" as="geometry"><mxPoint x="670" y="100" as="sourcePoint"/><mxPoint x="670" y="600" as="targetPoint"/></mxGeometry></mxCell><mxCell id="msg1" value="Request Report" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1" source="actor1" target="actor2"><mxGeometry relative="1" as="geometry"><mxPoint x="150" y="130" as="sourcePoint"/></mxGeometry></mxCell><mxCell id="msg2" value="Query Data" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1" source="actor2" target="actor3"><mxGeometry relative="1" as="geometry"><mxPoint x="520" y="160" as="sourcePoint"/></mxGeometry></mxCell><mxCell id="msg3" value="Data Set" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;dashed=1;rounded=0;" edge="1" parent="1" source="actor3" target="actor2"><mxGeometry relative="1" as="geometry"><mxPoint x="520" y="190" as="sourcePoint"/></mxGeometry></mxCell><mxCell id="msg4" value="Generate PDF" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;" edge="1" parent="1" source="actor2" target="actor2"><mxGeometry relative="1" as="geometry"><mxPoint x="410" y="220" as="sourcePoint"/></mxGeometry></mxCell><mxCell id="msg5" value="Report File" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=open;dashed=1;rounded=0;" edge="1" parent="1" source="actor2" target="actor1"><mxGeometry relative="1" as="geometry"><mxPoint x="150" y="250" as="sourcePoint"/></mxGeometry></mxCell></root></mxGraphModel></diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2026-07-14T00:00:00.000Z" agent="5.0" version="21.0.0" type="device">
+  <diagram name="SD-007 Generate Report" id="seq7">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pm" value="Project Manager" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="ReportPage" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ctrl" value="ReportController" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="Database" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pdf" value="PDF Generator" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ll1" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="60" as="sourcePoint" />
+            <mxPoint x="100" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll2" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="60" as="sourcePoint" />
+            <mxPoint x="280" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll3" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="60" as="sourcePoint" />
+            <mxPoint x="460" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll4" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="60" as="sourcePoint" />
+            <mxPoint x="640" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ll5" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="60" as="sourcePoint" />
+            <mxPoint x="820" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" value="select type, set filters" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="100" as="sourcePoint" />
+            <mxPoint x="280" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="click generate" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="150" as="sourcePoint" />
+            <mxPoint x="280" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="generate(data)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="200" as="sourcePoint" />
+            <mxPoint x="460" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="fetchData()" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="250" as="sourcePoint" />
+            <mxPoint x="640" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="resultSet" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="300" as="sourcePoint" />
+            <mxPoint x="460" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="report data" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="350" as="sourcePoint" />
+            <mxPoint x="280" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="display" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="400" as="sourcePoint" />
+            <mxPoint x="100" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="click export" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="450" as="sourcePoint" />
+            <mxPoint x="280" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="exportPDF()" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="500" as="sourcePoint" />
+            <mxPoint x="820" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="file" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="820" y="550" as="sourcePoint" />
+            <mxPoint x="280" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="download" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="600" as="sourcePoint" />
+            <mxPoint x="100" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
