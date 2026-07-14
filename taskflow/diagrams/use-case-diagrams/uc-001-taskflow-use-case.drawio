@@ -1,0 +1,211 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="MK8a7zqJtCIvCillMyNq">
+    <mxGraphModel dx="1314" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="boundary" parent="1" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=16;fontStyle=1;align=center;arcSize=3;" value="TaskFlow System" vertex="1">
+          <mxGeometry height="1380" width="680" x="220" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h_auth" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#555555;" value="Authentication" vertex="1">
+          <mxGeometry height="20" width="160" x="360" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="h_user" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#555555;" value="User Management" vertex="1">
+          <mxGeometry height="20" width="160" x="360" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="h_team" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#555555;" value="Team Management" vertex="1">
+          <mxGeometry height="20" width="160" x="360" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="h_proj" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#555555;" value="Project Management" vertex="1">
+          <mxGeometry height="20" width="160" x="360" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="h_task" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#555555;" value="Task Management" vertex="1">
+          <mxGeometry height="20" width="160" x="360" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="h_dash" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#555555;" value="Dashboard &amp; Notifications" vertex="1">
+          <mxGeometry height="20" width="160" x="360" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="h_rep" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;fontColor=#555555;" value="Reporting" vertex="1">
+          <mxGeometry height="20" width="160" x="360" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="System Administrator" vertex="1">
+          <mxGeometry height="80" width="40" x="60" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="pm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Project Manager" vertex="1">
+          <mxGeometry height="80" width="40" x="60" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="tm" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Team Member" vertex="1">
+          <mxGeometry height="80" width="40" x="970" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_login" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Login" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_logout" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Logout" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_c_user" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create User" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_u_user" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Update User" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_d_user" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Deactivate User" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_c_team" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create Team" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_assign_team" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Assign User to Team" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_rem_team" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Remove User from Team" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_c_proj" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create Project" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_u_proj" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Update Project" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_arc_proj" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Archive Project" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_chk_tasks" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Check All Tasks Completed" vertex="1">
+          <mxGeometry height="45" width="180" x="660" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_c_task" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Create Task" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_ass_task" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Assign Task" vertex="1">
+          <mxGeometry height="45" width="160" x="660" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_v_tasks" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Assigned Tasks" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_u_status" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Update Task Status" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_comment" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Comment on Task" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_dash" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Dashboard" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_notif" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Notifications" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_g_proj_rep" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Generate Project Report" vertex="1">
+          <mxGeometry height="45" width="160" x="360" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_g_perf_rep" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Generate Performance Report" vertex="1">
+          <mxGeometry height="45" width="180" x="360" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_inc_dash" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Dashboard" vertex="1">
+          <mxGeometry height="45" width="160" x="660" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="inc1" edge="1" parent="1" source="uc_arc_proj" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="uc_chk_tasks" value="&amp;lt;&amp;lt;include&amp;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc2" edge="1" parent="1" source="uc_c_task" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="uc_ass_task" value="&amp;lt;&amp;lt;include&amp;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc3" edge="1" parent="1" source="uc_g_proj_rep" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="uc_inc_dash" value="&amp;lt;&amp;lt;include&amp;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_log" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_out" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_c_u" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_c_user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_u_u" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_u_user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_d_u" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_d_user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_c_t" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_c_team">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_a_t" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_assign_team">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea_r_t" edge="1" parent="1" source="admin" style="endArrow=none;html=1;rounded=0;" target="uc_rem_team">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_log" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_out" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_c_t" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_c_team">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_a_t" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_assign_team">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_r_t" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_rem_team">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_cp" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_c_proj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_up" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_u_proj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_ap" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_arc_proj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_ct" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_c_task">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_vt" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_v_tasks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_us" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_u_status">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_com" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_comment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_dash" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_dash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_not" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_notif">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_gpr" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_g_proj_rep">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ep_gpf" edge="1" parent="1" source="pm" style="endArrow=none;html=1;rounded=0;" target="uc_g_perf_rep">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et_log" edge="1" parent="1" source="tm" style="endArrow=none;html=1;rounded=0;" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et_out" edge="1" parent="1" source="tm" style="endArrow=none;html=1;rounded=0;" target="uc_logout">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et_vt" edge="1" parent="1" source="tm" style="endArrow=none;html=1;rounded=0;" target="uc_v_tasks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et_us" edge="1" parent="1" source="tm" style="endArrow=none;html=1;rounded=0;" target="uc_u_status">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et_com" edge="1" parent="1" source="tm" style="endArrow=none;html=1;rounded=0;" target="uc_comment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et_dash" edge="1" parent="1" source="tm" style="endArrow=none;html=1;rounded=0;" target="uc_dash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et_not" edge="1" parent="1" source="tm" style="endArrow=none;html=1;rounded=0;" target="uc_notif">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
