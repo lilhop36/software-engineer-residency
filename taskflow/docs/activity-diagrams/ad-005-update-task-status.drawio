@@ -1,0 +1,61 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="HJFhlUflHDrg3kiAoZgq">
+    <mxGraphModel dx="1314" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Open Task Board / Task List" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Select a Task" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="act1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Choose New Status" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="act2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Confirm Status Change" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="act3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Update Task in Database" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="act4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Notify Project Manager" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="act5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Refresh Task Board View" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="act6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#ffffff;" value="End" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="eEnd" edge="1" parent="1" source="act7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

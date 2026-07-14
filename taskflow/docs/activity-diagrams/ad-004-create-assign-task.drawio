@@ -1,0 +1,97 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="gvwc7HBsEn-whBDIFRex">
+    <mxGraphModel dx="1314" dy="521" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="360" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="act1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Open Task Creation Page" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Select Project" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="act1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Enter Task Details" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="act2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Assign to User" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="act3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Click &quot;Create Task&quot;" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="act4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="act6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Validate Input" vertex="1">
+          <mxGeometry height="50" width="140" x="310" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="act5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="act6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="decDue" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Due Date Valid?" vertex="1">
+          <mxGeometry height="80" width="100" x="330" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="eDec" edge="1" parent="1" source="act6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="decDue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yes1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Save Task" vertex="1">
+          <mxGeometry height="50" width="130" x="560" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="eYes" edge="1" parent="1" source="decDue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="yes1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lblYes" connectable="0" parent="eYes" style="edgeLabel;html=1;align=center;verticalAlign=middle;" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yes2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Notify Assigned User" vertex="1">
+          <mxGeometry height="50" width="130" x="560" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="eYes2" edge="1" parent="1" source="yes1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="yes2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="endYes" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#ffffff;" value="End" vertex="1">
+          <mxGeometry height="50" width="130" x="560" y="735" as="geometry" />
+        </mxCell>
+        <mxCell id="eEndYes" edge="1" parent="1" source="yes2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="endYes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="err" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Display Error" vertex="1">
+          <mxGeometry height="50" width="130" x="160" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="eNo" edge="1" parent="1" source="decDue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="err">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lblNo" connectable="0" parent="eNo" style="edgeLabel;html=1;align=center;verticalAlign=middle;" value="No" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop" edge="1" parent="1" source="err" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="act3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="600" />
+              <mxPoint x="80" y="265" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
