@@ -1,9 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2026-07-14T00:00:00.000Z" agent="5.0" version="21.0.0" type="device">
+<mxfile host="app.diagrams.net" modified="2026-07-15T00:00:00.000Z" agent="5.0" version="21.0.0" type="device">
   <diagram name="SD-007 Generate Report" id="seq7">
-    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="800" math="0" shadow="0">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+
+        <!-- Participants -->
         <mxCell id="pm" value="Project Manager" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="20" width="120" height="40" as="geometry" />
         </mxCell>
@@ -13,107 +15,248 @@
         <mxCell id="ctrl" value="ReportController" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="400" y="20" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="db" value="Database" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+        <mxCell id="svc" value="ReportService" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="20" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="pdf" value="PDF Generator" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+        <mxCell id="repo" value="ReportRepository" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="760" y="20" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ll1" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="pdf" value="PDFGenerator" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Lifelines -->
+        <mxCell id="llPM" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="100" y="60" as="sourcePoint" />
-            <mxPoint x="100" y="750" as="targetPoint" />
+            <mxPoint x="100" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ll2" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="llUI" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="280" y="60" as="sourcePoint" />
-            <mxPoint x="280" y="750" as="targetPoint" />
+            <mxPoint x="280" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ll3" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="llCtrl" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="460" y="60" as="sourcePoint" />
-            <mxPoint x="460" y="750" as="targetPoint" />
+            <mxPoint x="460" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ll4" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="llSvc" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="640" y="60" as="sourcePoint" />
-            <mxPoint x="640" y="750" as="targetPoint" />
+            <mxPoint x="640" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ll5" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="llRepo" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="820" y="60" as="sourcePoint" />
-            <mxPoint x="820" y="750" as="targetPoint" />
+            <mxPoint x="820" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m1" value="select type, set filters" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="llPdf" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="100" y="100" as="sourcePoint" />
-            <mxPoint x="280" y="100" as="targetPoint" />
+            <mxPoint x="990" y="60" as="sourcePoint" />
+            <mxPoint x="990" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m2" value="click generate" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+
+        <!-- Activation bars -->
+        <mxCell id="actPM" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="94" y="80" width="12" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actUI" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="274" y="80" width="12" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="actCtrl" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="454" y="130" width="12" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="actSvc" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="634" y="180" width="12" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="actRepo" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="814" y="320" width="12" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="actPdf" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="984" y="620" width="12" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Messages -->
+        <mxCell id="m1" value="1: select report type, filters, click Generate" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="100" y="150" as="sourcePoint" />
-            <mxPoint x="280" y="150" as="targetPoint" />
+            <mxPoint x="100" y="90" as="sourcePoint" />
+            <mxPoint x="280" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m3" value="generate(data)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m2" value="2: GET /api/reports?type=&amp;filters=" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="200" as="sourcePoint" />
-            <mxPoint x="460" y="200" as="targetPoint" />
+            <mxPoint x="280" y="140" as="sourcePoint" />
+            <mxPoint x="460" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m4" value="fetchData()" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m3" value="3: generateReport(type, filters, pmId)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="250" as="sourcePoint" />
-            <mxPoint x="640" y="250" as="targetPoint" />
+            <mxPoint x="460" y="190" as="sourcePoint" />
+            <mxPoint x="640" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m5" value="resultSet" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+
+        <!-- Authorization: PM only -->
+        <mxCell id="selfRole" value="4: validateRole(pmId, &quot;PROJECT_MANAGER&quot;)" style="endArrow=block;html=1;rounded=0;shape=curvedEdge;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="300" as="sourcePoint" />
-            <mxPoint x="460" y="300" as="targetPoint" />
+            <mxPoint x="640" y="230" as="sourcePoint" />
+            <mxPoint x="640" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="230" />
+              <mxPoint x="680" y="250" />
+              <mxPoint x="640" y="250" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="m6" value="report data" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="retRole" value="4.1: true" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="690" y="255" width="50" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m4" value="5: fetchReportData(filters)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="350" as="sourcePoint" />
-            <mxPoint x="280" y="350" as="targetPoint" />
+            <mxPoint x="640" y="280" as="sourcePoint" />
+            <mxPoint x="820" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m7" value="display" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m5" value="6: resultSet" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="400" as="sourcePoint" />
-            <mxPoint x="100" y="400" as="targetPoint" />
+            <mxPoint x="820" y="320" as="sourcePoint" />
+            <mxPoint x="640" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m8" value="click export" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+
+        <!-- ALT FRAME -->
+        <mxCell id="altFrame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;opacity=80;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="200" y="350" width="800" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="altLab" value="alt [data found]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="210" y="355" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="div" style="endArrow=none;dashed=1;html=1;strokeColor=#999999;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="100" y="450" as="sourcePoint" />
-            <mxPoint x="280" y="450" as="targetPoint" />
+            <mxPoint x="200" y="500" as="sourcePoint" />
+            <mxPoint x="1000" y="500" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m9" value="exportPDF()" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="elseLab" value="else [no data]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="210" y="505" width="90" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Success -->
+        <mxCell id="m6" value="7: report data" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="500" as="sourcePoint" />
-            <mxPoint x="820" y="500" as="targetPoint" />
+            <mxPoint x="640" y="390" as="sourcePoint" />
+            <mxPoint x="460" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m10" value="file" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m7" value="8: 200 OK + report" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="820" y="550" as="sourcePoint" />
-            <mxPoint x="280" y="550" as="targetPoint" />
+            <mxPoint x="460" y="430" as="sourcePoint" />
+            <mxPoint x="280" y="430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m11" value="download" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="selfDisplay" value="9: displayReport()" style="endArrow=block;html=1;rounded=0;shape=curvedEdge;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="600" as="sourcePoint" />
-            <mxPoint x="100" y="600" as="targetPoint" />
+            <mxPoint x="280" y="470" as="sourcePoint" />
+            <mxPoint x="280" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="470" />
+              <mxPoint x="320" y="490" />
+              <mxPoint x="280" y="490" />
+            </Array>
           </mxGeometry>
+        </mxCell>
+
+        <!-- Optional export: PM clicks Export -->
+        <mxCell id="m8" value="10: click Export" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="520" as="sourcePoint" />
+            <mxPoint x="280" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="11: POST /api/reports/export" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="560" as="sourcePoint" />
+            <mxPoint x="460" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="12: exportPDF(reportData)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="600" as="sourcePoint" />
+            <mxPoint x="640" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" value="13: generate(reportData)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="640" as="sourcePoint" />
+            <mxPoint x="990" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12" value="14: PDF blob" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="990" y="680" as="sourcePoint" />
+            <mxPoint x="640" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m13" value="15: PDF blob" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="720" as="sourcePoint" />
+            <mxPoint x="460" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" value="16: 200 OK (file)" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="760" as="sourcePoint" />
+            <mxPoint x="280" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="selfDownload" value="17: initiateDownload()" style="endArrow=block;html=1;rounded=0;shape=curvedEdge;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="800" as="sourcePoint" />
+            <mxPoint x="280" y="800" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="800" />
+              <mxPoint x="320" y="820" />
+              <mxPoint x="280" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Failure: no data -->
+        <mxCell id="mErr" value="18: error(404)" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="530" as="sourcePoint" />
+            <mxPoint x="460" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mErrCtrl" value="19: 404 Not Found" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="570" as="sourcePoint" />
+            <mxPoint x="280" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="selfErr" value="20: showError(&quot;No data for selected criteria&quot;)" style="endArrow=block;html=1;rounded=0;shape=curvedEdge;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="610" as="sourcePoint" />
+            <mxPoint x="280" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="610" />
+              <mxPoint x="320" y="630" />
+              <mxPoint x="280" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Notes -->
+        <mxCell id="noteNFR003" value="«NFR-003» Report generation must complete within 5 seconds" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF9C4;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="690" y="350" width="220" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
