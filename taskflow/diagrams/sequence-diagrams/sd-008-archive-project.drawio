@@ -1,143 +1,211 @@
-<mxfile host="app.diagrams.net" modified="2026-07-14T00:00:00.000Z" agent="5.0" version="21.0.0" type="device">
+<mxfile host="app.diagrams.net" modified="2026-07-15T00:00:00.000Z" agent="5.0" version="21.0.0" type="device">
   <diagram name="SD-008 Archive Project" id="seq8">
-    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+
+        <!-- Participants -->
         <mxCell id="pm" value="Project Manager" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="40" y="20" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ui" value="ProjectSettingsPage" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="220" y="20" width="120" height="40" as="geometry" />
+          <mxGeometry x="220" y="20" width="130" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ctrl" value="ProjectController" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="400" y="20" width="120" height="40" as="geometry" />
+          <mxGeometry x="410" y="20" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="db" value="Database" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
-          <mxGeometry x="580" y="20" width="120" height="40" as="geometry" />
+        <mxCell id="svc" value="ProjectService" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="20" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ll1" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="repo" value="ProjectRepository" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;shadow=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="20" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Lifelines -->
+        <mxCell id="llPM" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="100" y="60" as="sourcePoint" />
             <mxPoint x="100" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ll2" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="llUI" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="60" as="sourcePoint" />
-            <mxPoint x="280" y="850" as="targetPoint" />
+            <mxPoint x="285" y="60" as="sourcePoint" />
+            <mxPoint x="285" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ll3" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="llCtrl" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="60" as="sourcePoint" />
-            <mxPoint x="460" y="850" as="targetPoint" />
+            <mxPoint x="470" y="60" as="sourcePoint" />
+            <mxPoint x="470" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ll4" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="llSvc" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="60" as="sourcePoint" />
-            <mxPoint x="640" y="850" as="targetPoint" />
+            <mxPoint x="650" y="60" as="sourcePoint" />
+            <mxPoint x="650" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m1" value="select project" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="llRepo" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="100" y="100" as="sourcePoint" />
-            <mxPoint x="280" y="100" as="targetPoint" />
+            <mxPoint x="830" y="60" as="sourcePoint" />
+            <mxPoint x="830" y="850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m2" value="click archive" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+
+        <!-- Activation bars -->
+        <mxCell id="actPM" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="94" y="80" width="12" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actUI" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="279" y="80" width="12" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="actCtrl" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="464" y="130" width="12" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="actSvc" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="644" y="180" width="12" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="actRepo" value="" style="shape=rect;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="824" y="370" width="12" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Messages -->
+        <mxCell id="m1" value="1: select project, click Archive" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="100" y="150" as="sourcePoint" />
-            <mxPoint x="280" y="150" as="targetPoint" />
+            <mxPoint x="100" y="90" as="sourcePoint" />
+            <mxPoint x="285" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m3" value="checkAllTasks(id)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m2" value="2: PUT /api/projects/{id}/archive" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="200" as="sourcePoint" />
-            <mxPoint x="460" y="200" as="targetPoint" />
+            <mxPoint x="285" y="140" as="sourcePoint" />
+            <mxPoint x="470" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m4" value="query" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m3" value="3: archiveProject(id, pmId)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="250" as="sourcePoint" />
-            <mxPoint x="640" y="250" as="targetPoint" />
+            <mxPoint x="470" y="190" as="sourcePoint" />
+            <mxPoint x="650" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m5" value="allDone?" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+
+        <!-- Authorization: PM & owner -->
+        <mxCell id="selfRole" value="4: validateRoleAndOwnership(pmId, projectId)" style="endArrow=block;html=1;rounded=0;shape=curvedEdge;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="300" as="sourcePoint" />
-            <mxPoint x="460" y="300" as="targetPoint" />
+            <mxPoint x="650" y="230" as="sourcePoint" />
+            <mxPoint x="650" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="690" y="230" />
+              <mxPoint x="690" y="250" />
+              <mxPoint x="650" y="250" />
+            </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="retRole" value="4.1: true / false" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="255" width="90" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- BR-002: all tasks completed -->
+        <mxCell id="m4" value="5: getIncompleteTaskCount(projectId)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="280" as="sourcePoint" />
+            <mxPoint x="830" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" value="6: count" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="830" y="320" as="sourcePoint" />
+            <mxPoint x="650" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ALT FRAME -->
         <mxCell id="altFrame" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;opacity=80;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="220" y="340" width="480" height="280" as="geometry" />
+          <mxGeometry x="200" y="350" width="650" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="altLab" value="alt [not all tasks completed]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
-          <mxGeometry x="230" y="345" width="200" height="20" as="geometry" />
+        <mxCell id="altLab" value="alt [count == 0 &amp;&amp; authorised]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="210" y="355" width="220" height="20" as="geometry" />
         </mxCell>
         <mxCell id="div" style="endArrow=none;dashed=1;html=1;strokeColor=#999999;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="220" y="470" as="sourcePoint" />
-            <mxPoint x="700" y="470" as="targetPoint" />
+            <mxPoint x="200" y="510" as="sourcePoint" />
+            <mxPoint x="850" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="elseLab" value="else [all done]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
-          <mxGeometry x="230" y="475" width="100" height="20" as="geometry" />
+        <mxCell id="elseLab" value="else" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="210" y="515" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="m6errCtrl" value="error" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+
+        <!-- Success -->
+        <mxCell id="m6" value="7: updateStatus(projectId, ARCHIVED)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="400" as="sourcePoint" />
-            <mxPoint x="280" y="400" as="targetPoint" />
+            <mxPoint x="650" y="390" as="sourcePoint" />
+            <mxPoint x="830" y="390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m6errUI" value="display error" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m7" value="8: OK" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="440" as="sourcePoint" />
-            <mxPoint x="100" y="440" as="targetPoint" />
+            <mxPoint x="830" y="430" as="sourcePoint" />
+            <mxPoint x="650" y="430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m7" value="show confirmation dialog" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m8" value="9: project archived" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="520" as="sourcePoint" />
-            <mxPoint x="280" y="520" as="targetPoint" />
+            <mxPoint x="650" y="470" as="sourcePoint" />
+            <mxPoint x="470" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m8" value="yes" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="m9" value="10: 200 OK" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="100" y="560" as="sourcePoint" />
-            <mxPoint x="280" y="560" as="targetPoint" />
+            <mxPoint x="470" y="510" as="sourcePoint" />
+            <mxPoint x="285" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m9" value="confirmArchive(id)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="selfSuccess" value="11: displaySuccess()" style="endArrow=block;html=1;rounded=0;shape=curvedEdge;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="600" as="sourcePoint" />
-            <mxPoint x="460" y="600" as="targetPoint" />
+            <mxPoint x="285" y="550" as="sourcePoint" />
+            <mxPoint x="285" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="550" />
+              <mxPoint x="320" y="570" />
+              <mxPoint x="285" y="570" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="m10" value="updateStatus(archived)" style="endArrow=block;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+
+        <!-- Failure branch -->
+        <mxCell id="mErr" value="12: error(400/403)" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="650" as="sourcePoint" />
-            <mxPoint x="640" y="650" as="targetPoint" />
+            <mxPoint x="650" y="550" as="sourcePoint" />
+            <mxPoint x="470" y="550" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m11" value="OK" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="mErrCtrl" value="13: error(400/403)" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="640" y="700" as="sourcePoint" />
-            <mxPoint x="460" y="700" as="targetPoint" />
+            <mxPoint x="470" y="590" as="sourcePoint" />
+            <mxPoint x="285" y="590" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m12" value="success" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
+        <mxCell id="selfErr" value="14: showError(message)" style="endArrow=block;html=1;rounded=0;shape=curvedEdge;fontSize=11;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="460" y="750" as="sourcePoint" />
-            <mxPoint x="280" y="750" as="targetPoint" />
+            <mxPoint x="285" y="630" as="sourcePoint" />
+            <mxPoint x="285" y="630" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="630" />
+              <mxPoint x="320" y="650" />
+              <mxPoint x="285" y="650" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="m13" value="archived" style="endArrow=open;dashed=1;html=1;rounded=0;fontSize=11;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="800" as="sourcePoint" />
-            <mxPoint x="100" y="800" as="targetPoint" />
-          </mxGeometry>
+
+        <!-- Notes -->
+        <mxCell id="noteBR002" value="«BR-002» All tasks must be Done before archiving" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF9C4;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="350" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="noteBR008" value="«BR-008» Only project owner (or admin) can archive" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF9C4;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="230" width="200" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
